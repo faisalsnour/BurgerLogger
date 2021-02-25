@@ -18,7 +18,6 @@ function fetchJSON( url, method='GET', data={} ){
     const burgerData = {
     burger_name: document.querySelector("#burgerName").value
     }
-  
     const result = await fetchJSON( `/api/add`, 'POST', burgerData )
     console.log( ` new burger id is`, result )
     // Reload the page to get the updated list

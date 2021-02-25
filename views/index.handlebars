@@ -1,18 +1,30 @@
-<img src="" style="display: block;" width="200px" height="150px" class="mx-auto">
+<img src="assets/burger.png" style="display: block;" width="200px" height="150px" class="mx-auto">
 <h2 style="color: red; display: block; text-align: center; margin-top: 15px;">Eat-Da-Burger!</h2>
 <div class="row" style="margin-left: 100px; margin-right: 100px;">
     <div id="left-side" class="col" style="background-color: red;">
         {{#each burgers}}
+        {{#if this.devoured}}
+        {{else}}
         <li class="list-group-item d-flex justify-content-between align-items-center">
             <span id="burgerID">{{this.id}}</span>
             {{this.burger_name}}
             <button type="button" class="btn btn-success" onclick="">Devour</button>
         </li>
+        {{/if}}
         {{/each}}
     </div>
     <!--end of first column-->
     <div id="right-side" class="col" style="background-color: royalblue;">
+        {{#each burgers}}
+        {{#if this.devoured}}
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+            <span id="burgerTrueID">{{this.id}}</span>
+            {{this.burger_name}}
+            {{!-- <button type="button" class="btn btn-success" onclick="">Devour</button> --}}
+        </li>
+        {{/if}}
 
+        {{/each}}
     </div>
     <!--end of second column-->
 </div>

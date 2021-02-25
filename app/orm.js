@@ -2,7 +2,12 @@ const db = require( './connection' )('burgers_db','rootroot')
 
 
 function selectAll(){
-    const sql = `SELECT * FROM burgers `
+    const sql = `SELECT * FROM burgers;`
+    return db.query( sql )
+}
+
+function selectAllTrue(){
+    const sql = `select * from burgers where devoured = true;`
     return db.query( sql )
 }
 
@@ -15,4 +20,4 @@ function updateOne(){
     
 }
 
-module.exports = { selectAll, insertOne, updateOne }
+module.exports = { selectAll, insertOne, updateOne, selectAllTrue }

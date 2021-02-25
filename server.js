@@ -22,8 +22,10 @@ app.set("view engine", "handlebars");
 // Serve index.handlebars to the root route.
 app.get("/", async function(req, res) {
   const data = await orm.selectAll();
+  console.log(data)
   res.render("index", { burgers: data });
 });
+
 
 // Show the user the individual quote and the form to update the quote.
 // app.get("/:id", async function(req, res) {
