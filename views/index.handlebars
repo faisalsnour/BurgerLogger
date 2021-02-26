@@ -1,20 +1,21 @@
 <img src="assets/burger.png" style="display: block;" width="200px" height="150px" class="mx-auto">
-<h2 style="color: red; display: block; text-align: center; margin-top: 15px;">Eat-Da-Burger!</h2>
+<h2 style="color: #f29921; display: block; text-align: center; margin-top: 15px;">Eat-Da-Burger!</h2>
 <div class="row" style="margin-left: 100px; margin-right: 100px;">
-    <div id="left-side" class="col" style="background-color: red;">
+    <div id="left-side" class="col" style="background-color: hsl(216, 50%, 96%)">
         {{#each burgers}}
         {{#if this.devoured}}
         {{else}}
         <li class="list-group-item d-flex justify-content-between align-items-center">
             <span id="burgerID">{{this.id}}</span>
             {{this.burger_name}}
-            <button type="button" class="btn btn-success" onclick="">Devour</button>
+            <button type="button" class="btn btn-success" onclick="updateBurger({{this.id}})"
+                style="background-color:#275f38;">Devour</button>
         </li>
         {{/if}}
         {{/each}}
     </div>
     <!--end of first column-->
-    <div id="right-side" class="col" style="background-color: royalblue;">
+    <div id="right-side" class="col" style="background-color: hsl(216, 50%, 96%)">
         {{#each burgers}}
         {{#if this.devoured}}
         <li class="list-group-item d-flex justify-content-between align-items-center">
@@ -32,4 +33,4 @@
     style="width: 40%; display: block; margin-top: 15px;"
     placeholder="Enter the burger you want to eat and press the submit button"></textarea>
 <button type="button" onclick="addBurger()" class="btn btn-success mx-auto"
-    style="display: block; margin-top: 15px;">Submit</button>
+    style="display: block; margin-top: 15px; background-color:#275f38">Submit</button>

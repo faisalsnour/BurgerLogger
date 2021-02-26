@@ -13,6 +13,12 @@ function fetchJSON( url, method='GET', data={} ){
 
 
   async function addBurger(){
+
+    if(document.querySelector("#burgerName").value === ""){
+      alert(`Enter the burger name`)
+    }
+    else{
+
     console.log( `[submitQuote] create button pressed` )
   
     const burgerData = {
@@ -21,5 +27,14 @@ function fetchJSON( url, method='GET', data={} ){
     const result = await fetchJSON( `/api/add`, 'POST', burgerData )
     console.log( ` new burger id is`, result )
     // Reload the page to get the updated list
+    location.reload()}
+
+  }
+
+  async function updateBurger(id){
+    console.log(`the burger id is ${id} `)
+    // const burgerID = {id:id}
+
+    const result = await fetchJSON(`/api/update/${id}`,'PUT') 
     location.reload()
   }

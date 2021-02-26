@@ -27,6 +27,7 @@ app.get("/", async function(req, res) {
 });
 
 
+
 // Show the user the individual quote and the form to update the quote.
 // app.get("/:id", async function(req, res) {
 //   const quoteId = req.params.id;
@@ -41,6 +42,14 @@ app.post("/api/add", async function(req, res) {
 //   console.log( `[POST added quote] (author: ${author}, quote: ${quote}) resultId=${result.insertId}` );
   res.send( { id: result.id });
 });
+
+app.put("/api/update/:id", async function(req, res){
+  const burgerID = req.params.id
+  const result = await orm.updateOne(burgerID)
+  console.log("row has been updated")
+  res.send({message: `Updated row`})
+}
+)
 
 // app.delete("/api/quotes/:id", async function(req, res) {
 //   const quoteId = req.params.id

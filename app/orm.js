@@ -16,8 +16,9 @@ function insertOne(burgerName){
     return db.query(sql)
 }
 
-function updateOne(){
-    
+function updateOne(id){
+    const sql = `UPDATE burgers SET devoured = 1 WHERE id = ${id};`
+    return db.query(sql)
 }
 
 module.exports = { selectAll, insertOne, updateOne, selectAllTrue }
