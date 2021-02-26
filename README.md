@@ -17,13 +17,13 @@ The application does the following:
 
 The following pictures show the application's appearance and functionality;
 
-![Screen shows ](/public/.png)
+![Screen shows the home page of the application ](/public/assets/img/default-page.png)
 
-![Screen shows ](//.png)
+![Screen shows an error message if user submits an empty name ](/public/assets/img/error-message.png)
 
-![Screen shows ](//.png)
+![Screen shows an entry of one burger on the left side of the screen](/public/assets/img/one-burger-entry.png)
 
-![Screen shows ](/Assets/.png)
+![Screen shows two burgers on both sides if user clicks devour button](/public/assets/img/two-burgers-on-two-sides.png)
 
 ## Link to a deployed application
 
