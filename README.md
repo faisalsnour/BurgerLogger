@@ -2,7 +2,7 @@
 
 ## The purpose:
 
-To create a burger logger using MySQL, Node, Express, Handlebars, ORM and Heroku to deploye the application.
+To create a burger logger using MySQL, Node, Express, Handlebars, ORM and Heroku to deploye the application. The application allows users to enter burger names into the database, validates user's entry to ensure a burger name is entered and displays the entered burger on the left side of the page, waiting to be devoured. Once the user clicks the devour button, the burger will move to the right side of the page
 
 ## Features:
 
