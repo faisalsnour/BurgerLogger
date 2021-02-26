@@ -25,6 +25,6 @@ The following pictures show the application's appearance and functionality;
 
 ![Screen shows two burgers on both sides if user clicks devour button](/public/assets/img/two-burgers-on-two-sides.png)
 
-## Link to a deployed application
+## Link to the deployed application
 
-[Please click here]()
+[Please click here](https://faisal-burgerlog.herokuapp.com/)
