@@ -6,10 +6,10 @@ function selectAll(){
     return db.query( sql )
 }
 
-function selectAllTrue(){
-    const sql = `select * from burgers where devoured = true;`
-    return db.query( sql )
-}
+// function selectAllTrue(){
+//     const sql = `select * from burgers where devoured = true;`
+//     return db.query( sql )
+// }
 
 function insertOne(burgerName){
     const sql = `INSERT INTO burgers (burger_name) values ("${burgerName}")`
@@ -21,4 +21,4 @@ function updateOne(id){
     return db.query(sql)
 }
 
-module.exports = { selectAll, insertOne, updateOne, selectAllTrue }
+module.exports = { selectAll, insertOne, updateOne }
